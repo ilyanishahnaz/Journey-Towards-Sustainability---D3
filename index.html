@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Journey Towards Sustainability</title>
+    
+    <!-- Load CSS files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="grid-container">
+        <div class="header">
+            <h4 id="mapTitle">Countries with Access to Clean Fuels & Electricity</h4>
+            <select id="colorMetric">
+                <option value="Clean_fuels_access">Access to Clean Fuels</option>
+                <option value="Electricity_access">Access to Electricity</option>
+            </select>
+            <button id="resetButton">Reset</button>
+        </div>
+
+        <div class="info">
+            <div class="text-box" id="titleBox">
+                <h3 style="font-size: 30px"><b>Journey Towards <span class="colored-text">Sustainability</span></b></h3>
+				<p>This dashboard visualizes global sustainable energy data (2000-2019), highlighting electricity and clean fuel access, renewable energy,
+                    financial flows, and economic growth. It facilitates comparisons between countries and tracks progress towards 
+                    <span class="colored-text"><b>Sustainable Development Goal 7</b></span>, providing insights into global energy consumption patterns.</p>
+            </div>
+            <div class="text-box" id="infoBox">
+                <h3>Country Name</h3>
+				<p><b></b>Year: <b><span class="colored-text" id="year"></span></b></p>
+				<p>Population Density (P/Km&sup2;): <b><span class="colored-text" id="popDensity"></span></b></p>
+                <p>Access to Electricity (%): <b><span class="colored-text" id="elecAccess"></span></b></p>
+                <p>Access to Clean Fuels (%): <b><span class="colored-text" id="fuelAccess"></span></b></p>
+            </div>
+            <div class="slidecontainer" align="center">
+                <input id="yearSlider" type="range" min="2000" max="2019" value="2019" class="slider">
+            </div>
+        </div>
+        <div class="map" id="map"></div>    
+        
+        <div class="donut-container">
+            <div> <h4 align="center">Generated Electricity (<span id="year"></span>)</h4> </div>
+            <div id="svgDonutElec"></div>
+            <div> <h4 align="center">Total Final Energy Consumption (<span id="year"></span>)</h4> </div>
+            <div id="svgDonutCons"></div>
+        </div>
+
+        <div id="scatterTitle"> <h4 align="center">Renewable Energy Share vs GDP (<span id="year"></span>)</h4> </div>
+        <div class="scatter" id="svgScatter"></div>
+
+        <div id="lineTitle"> <h4 align="center">% Renewable Energy Share in Primary Energy Consumption</h4> </div>
+		<div class="chart" id="lineChart"></div>
+
+		<div class="bar-container">
+			<div> <h4 align="center" style="font-size: 19px;">Top Renewable Energy Consumers (kWh/person) (<span id="year"></span>)</h4> </div>
+			<div id="svgBarRenCon"></div>
+			<div> <h4 align="center" style="font-size: 19px;">Top Recipient in Green Tech Financial Aid ($) (<span id="year"></span>)</h4> </div>
+			<div id="svgGreenTech"></div>
+		</div>
+
+    <!-- Load JS libraries: jQuery, d3-regression, D3 -->
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Scatterplot implementation -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

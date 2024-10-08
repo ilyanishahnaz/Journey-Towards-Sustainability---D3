@@ -1,0 +1,143 @@
+
+
+/**** ADD YOUR STYLES ****/
+
+
+/****************/
+/*   BAR-CHART  */
+/****************/
+
+.bar {
+  fill: #3C948B;
+}
+
+.bar:hover {
+  fill: #327972;
+}
+
+body text {
+  font-size: 11px;
+}
+
+.axis-label {
+  fill: #888;
+  font-size: 10px;
+}
+
+h1{
+  color: purple;
+}
+
+.slidecontainer {
+  width: 20%; /* Width of the outside container */
+  width:800px;
+  margin:0 auto;
+}
+
+#yearSlider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 90%; /* Full-width */
+  height: 15px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.yearSlider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+}
+
+.header {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.info {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+#colorMetric {
+  float: center;
+}
+
+.map {
+  grid-column: 2;
+  grid-row: 2;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.donut-container {
+  grid-column: 3;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#scatterTitle {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.scatter {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.text-box {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 480px; 
+}
+
+.colored-text {
+  color: #ff7f0e
+}
+
+.slidecontainer {
+  margin-bottom: 20px;
+  width: 100%; 
+}
+
+#lineTitle {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.chart {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.bar-container {
+	grid-column: 3;
+	grid-row: 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#resetButton {
+  margin-left: 20px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #ff7f0e;
+  color: white;
+}
